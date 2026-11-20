@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#070d1d">
+  <meta name="description" content="Explore IPL matchday and book your place in the stands.">
+  <title>Matchday — IPL Tickets</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <header class="site-header">
+    <nav class="nav-wrap" aria-label="Main navigation">
+      <a class="brand" href="index.html">
+        <span class="brand-mark" aria-hidden="true">IPL</span>
+        <span>MATCHDAY / TICKET DESK</span>
+      </a>
+      <button class="nav-toggle" type="button" aria-label="Open navigation" aria-expanded="false" aria-controls="primary-navigation">
+        <span></span><span></span><span></span>
+      </button>
+      <div class="nav-links" id="primary-navigation">
+        <a href="#matches">Matches</a>
+        <a class="nav-cta" href="booking.html">Find your seat <span aria-hidden="true">↗</span></a>
+      </div>
+    </nav>
+  </header>
+
+  <main class="page-wrap">
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="hero-copy">
+        <p class="eyebrow">Cricket hits different under the lights</p>
+        <h1 id="hero-title">The roar.<span>The rivalry.</span>The night.</h1>
+        <p class="hero-description">Big moments belong in the stadium. Pick your fixture, bring your people, and feel every ball from the stands.</p>
+        <div class="button-row">
+          <a class="button" href="booking.html">Make it matchday <span aria-hidden="true">&nbsp;↗</span></a>
+          <a class="text-link" href="#matches">Explore upcoming fixtures</a>
+        </div>
+      </div>
+
+      <article class="spotlight" aria-label="Featured fixture">
+        <div class="spotlight-top">
+          <span><span class="live-dot" aria-hidden="true"></span>Featured fixture</span>
+          <span>01 / NIGHT GAME</span>
+        </div>
+        <div class="versus">
+          <div class="team">
+            <span class="team-badge" aria-hidden="true">MI</span>
+            <span>Mumbai Indians</span>
+          </div>
+          <span class="vs">VERSUS</span>
+          <div class="team">
+            <span class="team-badge" aria-hidden="true">CSK</span>
+            <span>Chennai Super Kings</span>
+          </div>
+        </div>
+        <div class="spotlight-bottom">
+          <span>Rivalry night</span>
+          <strong>Seats are waiting <span aria-hidden="true">↗</span></strong>
+        </div>
+      </article>
+    </section>
+
+    <section id="matches" aria-labelledby="matches-title">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">Pick your pulse</p>
+          <h2 id="matches-title">The next big nights</h2>
+        </div>
+        <p>Three fixtures. Three different kinds of chaos. Find the one that feels like yours.</p>
+      </div>
+      <div class="schedule-toolbar">
+        <label class="team-filter" for="team-filter">
+          <span>Filter by team</span>
+          <select id="team-filter">
+            <option value="all">All teams</option>
+            <option value="mi">Mumbai Indians</option>
+            <option value="csk">Chennai Super Kings</option>
+            <option value="rcb">Royal Challengers Bengaluru</option>
+            <option value="kkr">Kolkata Knight Riders</option>
+            <option value="srh">Sunrisers Hyderabad</option>
+            <option value="rr">Rajasthan Royals</option>
+          </select>
+        </label>
+        <div class="view-controls" role="group" aria-label="Match display style">
+          <button class="view-button is-active" type="button" data-view="grid" aria-pressed="true">Grid</button>
+          <button class="view-button" type="button" data-view="list" aria-pressed="false">List</button>
+        </div>
+      </div>
+      <p class="schedule-status" id="schedule-status" aria-live="polite"></p>
+      <div class="match-grid" id="match-grid">
+        <article class="match-card" data-teams="mi csk">
+          <p>Rivalry night</p>
+          <h3>Mumbai Indians<br>vs Chennai Super Kings</h3>
+          <span>Wankhede Stadium · Mumbai</span>
+        </article>
+        <article class="match-card" data-teams="rcb kkr">
+          <p>Electric atmosphere</p>
+          <h3>Royal Challengers Bengaluru<br>vs Kolkata Knight Riders</h3>
+          <span>M. Chinnaswamy Stadium · Bengaluru</span>
+        </article>
+        <article class="match-card" data-teams="srh rr">
+          <p>All eyes on the finish</p>
+          <h3>Sunrisers Hyderabad<br>vs Rajasthan Royals</h3>
+          <span>Rajiv Gandhi Stadium · Hyderabad</span>
+        </article>
+      </div>
+    </section>
+
+    <section class="guidelines-section" aria-labelledby="guidelines-title">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">Good to know</p>
+          <h2 id="guidelines-title">Your matchday guide</h2>
+        </div>
+        <p>A few simple pointers for a smoother trip from the gate to the last ball.</p>
+      </div>
+      <div class="guidelines-grid">
+        <article class="guideline-card">
+          <span class="guideline-number">01</span>
+          <h3>Arrive early</h3>
+          <p>Give yourself time for stadium entry and security checks before the first ball.</p>
+        </article>
+        <article class="guideline-card">
+          <span class="guideline-number">02</span>
+          <h3>Check your gate</h3>
+          <p>Keep your ticket handy and follow the entry and seating details for your stand.</p>
+        </article>
+        <article class="guideline-card">
+          <span class="guideline-number">03</span>
+          <h3>Bring the energy</h3>
+          <p>Cheer for your team, respect fellow fans, and enjoy every moment of the game.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="roles-section" aria-labelledby="roles-title">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">Every player has a part</p>
+          <h2 id="roles-title">Roles on the pitch</h2>
+        </div>
+        <p>Different skills, one team. These are the key roles that shape a cricket match.</p>
+      </div>
+      <div class="roles-grid">
+        <article class="role-card">
+          <span>01 / BAT</span>
+          <h3>Batter</h3>
+          <p>Builds the innings, scores runs, and takes on the bowling attack.</p>
+        </article>
+        <article class="role-card">
+          <span>02 / BOWL</span>
+          <h3>Bowler</h3>
+          <p>Delivers the ball, takes wickets, and works to keep the scoring down.</p>
+        </article>
+        <article class="role-card">
+          <span>03 / ALL ROUND</span>
+          <h3>All-rounder</h3>
+          <p>Contributes with both bat and ball to give the team extra options.</p>
+        </article>
+        <article class="role-card">
+          <span>04 / KEEP</span>
+          <h3>Wicketkeeper</h3>
+          <p>Guards the stumps, catches edges, and supports the fielding side.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="site-summary" aria-labelledby="summary-title">
+      <h2 id="summary-title">Your matchday, in one place.</h2>
+      <p>Explore featured IPL fixtures, choose your match and stand, then enter your details in the booking form. The page checks required information in your browser before continuing.</p>
+    </section>
+  </main>
+
+  <footer class="site-footer">Make some noise. Make it matchday.</footer>
+</body>
+</html>

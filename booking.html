@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#070d1d">
+  <meta name="description" content="Choose your IPL match, stand, and ticket quantity.">
+  <title>Find Your Seat — Matchday</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <header class="site-header">
+    <nav class="nav-wrap" aria-label="Main navigation">
+      <a class="brand" href="index.html">
+        <span class="brand-mark" aria-hidden="true">IPL</span>
+        <span>MATCHDAY / TICKET DESK</span>
+      </a>
+      <button class="nav-toggle" type="button" aria-label="Open navigation" aria-expanded="false" aria-controls="primary-navigation">
+        <span></span><span></span><span></span>
+      </button>
+      <div class="nav-links" id="primary-navigation">
+        <a href="index.html#matches">Matches</a>
+        <a class="nav-cta" href="booking.html" aria-current="page">Your booking</a>
+      </div>
+    </nav>
+  </header>
+
+  <main class="page-wrap">
+    <section class="booking-intro" aria-labelledby="page-title">
+      <p class="eyebrow">Your night starts here</p>
+      <h1 id="page-title">Find your <span>seat.</span></h1>
+      <p>Pick a fixture, choose your view of the action, and get ready for a night worth remembering.</p>
+    </section>
+
+    <div class="booking-layout">
+      <section class="booking-panel" aria-labelledby="form-title">
+        <div class="form-heading">
+          <h2 id="form-title">Booking details</h2>
+          <p>Fields marked * are required. Your browser checks your details before continuing.</p>
+        </div>
+
+        <form id="booking-form" action="booking.html" method="get">
+          <div class="fields">
+            <div class="field">
+              <label for="name">Full name <span aria-hidden="true">*</span></label>
+              <input id="name" name="name" type="text" autocomplete="name" minlength="2" maxlength="60" required>
+            </div>
+
+            <div class="field">
+              <label for="email">Email address <span aria-hidden="true">*</span></label>
+              <input id="email" name="email" type="email" autocomplete="email" maxlength="254" required>
+            </div>
+
+            <div class="field">
+              <label for="phone">Phone number <span aria-hidden="true">*</span></label>
+              <input id="phone" name="phone" type="tel" autocomplete="tel" inputmode="tel" pattern="[0-9]{7,15}" minlength="7" maxlength="15" aria-describedby="phone-hint" required>
+              <p class="hint" id="phone-hint">Enter 7–15 digits without spaces or punctuation.</p>
+            </div>
+
+            <div class="field">
+              <label for="match">Select a match <span aria-hidden="true">*</span></label>
+              <select id="match" name="match" required>
+                <option value="" selected disabled>Choose a match</option>
+                <option value="mi-csk">Mumbai Indians vs Chennai Super Kings</option>
+                <option value="rcb-kkr">Royal Challengers Bengaluru vs Kolkata Knight Riders</option>
+                <option value="srh-rr">Sunrisers Hyderabad vs Rajasthan Royals</option>
+                <option value="dc-pbks">Delhi Capitals vs Punjab Kings</option>
+              </select>
+            </div>
+
+            <div class="field">
+              <label for="stand">Stand category <span aria-hidden="true">*</span></label>
+              <select id="stand" name="stand" required>
+                <option value="" selected disabled>Choose a stand</option>
+                <option value="general">General</option>
+                <option value="premium">Premium</option>
+                <option value="pavilion">Pavilion</option>
+              </select>
+            </div>
+
+            <div class="field">
+              <label for="tickets">Number of tickets <span aria-hidden="true">*</span></label>
+              <input id="tickets" name="tickets" type="number" min="1" max="10" step="1" value="1" required>
+              <p class="hint">You can book 1–10 tickets.</p>
+            </div>
+          </div>
+
+          <fieldset>
+            <legend>Make it your match (optional)</legend>
+            <label class="choice" for="accessible">
+              <input id="accessible" name="accessible" type="checkbox" value="yes">
+              I need accessible seating information.
+            </label>
+            <label class="choice" for="updates">
+              <input id="updates" name="updates" type="checkbox" value="yes">
+              Send me occasional match and booking updates.
+            </label>
+          </fieldset>
+
+          <div class="actions">
+            <button class="submit" type="submit">Show booking summary <span aria-hidden="true">↗</span></button>
+            <button class="reset" type="reset">Reset form</button>
+          </div>
+        </form>
+
+        <section id="booking-result" class="booking-result" aria-labelledby="booking-result-title" aria-live="polite" tabindex="-1" hidden>
+          <p class="eyebrow">Your details at a glance</p>
+          <h2 id="booking-result-title">Review your booking</h2>
+          <p class="booking-result-note">Check your details below. This demo displays a summary only; it does not reserve seats or process payment.</p>
+          <dl id="booking-summary" class="booking-summary"></dl>
+          <button id="edit-booking" class="reset" type="button">Back to edit</button>
+        </section>
+      </section>
+      <aside class="booking-aside" aria-labelledby="next-title">
+        <p class="eyebrow">The game plan</p>
+        <h2 id="next-title">A few quick steps.</h2>
+        <p>Lock in the details now. The good stuff happens when the stadium lights come on.</p>
+        <ol class="step-list">
+          <li><span class="step-number">01</span><span>Choose your match and stand.</span></li>
+          <li><span class="step-number">02</span><span>Enter contact details to continue.</span></li>
+          <li><span class="step-number">03</span><span>Get ready to be part of the noise.</span></li>
+        </ol>
+      </aside>
+    </div>
+  </main>
+  <footer class="site-footer"><a href="index.html">← Back to Matchday</a></footer>
+</body>
+</html>
